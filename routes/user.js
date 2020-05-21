@@ -31,7 +31,7 @@ router.get('/',(req,res)=>{
 //submiting form
 
 router.post('/send',urlencodedparser,upload.single('filing'),(req,res)=>{
-      const fileup = req.file.filename;
+      //const fileup = req.file.filename;
       const originalname = req.file.originalname
       
       
