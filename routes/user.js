@@ -24,8 +24,8 @@ router.get('/',(req,res)=>{
         res.render('form')
 });
 
-router.get('/',(req,res)=>{
-  res.render('formuploaded')
+router.get('/form-submit',(req,res)=>{
+  res.render('formsubmit')
 });
 
 //submiting form
@@ -59,7 +59,7 @@ console.log(output)
 
     sgMail.send(msg).then(() => {
         console.log('Message sent')
-        res.redirect('/form-uploaded')
+        res.redirect('/form-submit')
     }).catch((error) => {
         console.log(error.response.body)
     });  
